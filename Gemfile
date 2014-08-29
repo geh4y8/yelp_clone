@@ -10,6 +10,9 @@ gem 'coffee-rails'
 
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'capybara'
+gem "paperclip"
 
 group :development do
   gem 'better_errors'
