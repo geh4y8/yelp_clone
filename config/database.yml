@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: yelp_clone_development
+
+test:
+  adapter: postgresql
+  database: yelp_clone_test
