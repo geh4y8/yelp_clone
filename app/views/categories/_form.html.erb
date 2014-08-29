@@ -1,0 +1,10 @@
+<%= form_for @category, :url => categories_path, :html => { :multipart => true } do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="form-group">
+    <%= f.file_field :category_image %>
+  </div>
+  <%= f.submit(:class => "btn btn-primary") %>
+<% end %>
