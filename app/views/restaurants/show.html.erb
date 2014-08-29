@@ -1,5 +1,12 @@
 <h1> <%= @restaurant.name %> </h1>
+<h4> <%= @restaurant.reviews.count %> reviews <h4>
 <h3> <%= @restaurant.description %> </h3>
-<%= image_tag @restaurant.restaurant_photo.url(:thumb) %>
+<%= image_tag @restaurant.restaurant_photo.url(:medium) %>
+
+<% @restaurant.reviews.each do |review| %>
+  <p><%= link_to "#{review.rating}", restaurant_review_path(@restaurant, review), class: "btn btn-default" %></p>
+  <p><%= image_tag User.find(review.user_id).user_photo.url(:thumb) %></p>
+  <p><%= review.review_details %></p>
+<% end %>
 
 

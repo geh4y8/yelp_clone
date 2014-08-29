@@ -1,0 +1,5 @@
+<p><%= image_tag User.find(@review.user_id).user_photo.url(:thumb) %></p>
+<h1> <%= @review.rating %> </h1>
+<h3> <%= @review.review_details %> </h3>
+
+

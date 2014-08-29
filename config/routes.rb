@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions
   resources :categories
-  resources :restaurants
+  resources :restaurants do
+    resources :reviews
+  end
 
 end
