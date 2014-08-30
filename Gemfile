@@ -14,6 +14,8 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'capybara'
 gem "paperclip"
 gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+
 
 group :development do
   gem 'better_errors'

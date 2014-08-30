@@ -7,6 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <ul class="nav nav-pills">
+        <li class="active"><%= link_to "Home", >Home</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+    </div>
+  </nav>
 
 <% if current_user %>
   Logged in as <%= current_user.email %>.

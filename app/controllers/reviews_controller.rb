@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_filter :authorize, only: [:edit, :update]
 
   def index
     @restaurant = Restaurant.find(params[:restaurant_id])
