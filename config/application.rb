@@ -9,10 +9,7 @@ require "action_view/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
-config.assets.precompile += [
-      'bgvideo.webm',
-      'bgvideo.mp4'
-    ]
+
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -32,5 +29,9 @@ module YelpClone
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.assets.precompile += [
+      'bgvideo.webm',
+      'bgvideo.mp4'
+    ]
   end
 end
