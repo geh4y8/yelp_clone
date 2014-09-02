@@ -5,22 +5,33 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-</head>
-<body>
-  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <nav id="nav" class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container">
       <ul class="nav nav-pills">
-        <li class="active"><%= link_to "Home", >Home</a></li>
-        <li><a href="#">Reviews</a></li>
-        <li><a href="#">Messages</a></li>
+        <ul class="nav navbar-nav pull-left">
+          <li><%= image_tag("yelp.png", height: '60', width: '60', :id => "nav_logo") %></li>
+          <% if current_user %>
+            <li><span id="user_nav_label"><%= current_user.email %></span></li>
+          <% end %>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+          <% if current_user %>
+            <li><%= link_to "My Reviews", user_path(current_user) %></li>
+            <li><%= link_to "Browse Restaurants", restaurants_path %></li>
+            <li><%= link_to "Log Out", logout_path %></li>
+          <% else %>
+            <li class="active"><%= link_to "Home", root_url %></li>
+          <% end %>
+        </ul>
       </ul>
     </div>
   </nav>
+</head>
+<body>
 
-<% if current_user %>
-  Logged in as <%= current_user.email %>.
-  <%= link_to "Log Out", logout_path %>
-<% else %>
+
+
+<% if !current_user %>
   <%= link_to "Sign Up", signup_path %> or
   <%= link_to "Log In", login_path %>
 <% end %>
@@ -28,6 +39,10 @@
 
 
 <%= yield %>
+<video autoplay loop poster="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg" id="bgvid">
+<source src="/assets/bgvideo.webm" type="video/webm" />
+<source src="/assets/bgvideo.mp4" type="video/mp4" />
+</video>
 
 </body>
 </html>

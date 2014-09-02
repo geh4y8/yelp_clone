@@ -1,7 +1,13 @@
-<h1> Welcome <%= @user.email %> </h1>
+<div id="user_show_wrapper">
+  <div id="welcome">
+    <h1> Welcome <%= @user.email %> </h1>
+  </div>
 
+<%= image_tag @user.user_photo.url(:thumb) %>
+<br />
 <h2> Your Reviews: </h2>
 
 <% @user.reviews.each do |review| %>
   <%= review.review_details %>
 <% end %>
+</div>

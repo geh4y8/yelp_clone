@@ -168,7 +168,7 @@ DEPENDENCIES
   capybara
   coffee-rails
   jquery-rails
-  paperclip
+  paperclip (~> 4.2)
   pg
   quiet_assets
   rails

@@ -12,7 +12,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'capybara'
-gem "paperclip"
+gem "paperclip", "~> 4.2"
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 
