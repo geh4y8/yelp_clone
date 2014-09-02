@@ -4,7 +4,7 @@
 <p><%= image_tag @restaurant.restaurant_photo.url(:medium), :id => "restaurant_show_image" %><p>
 
 <% @restaurant.reviews.each do |review| %>
-  <p><%= link_to "#{review.rating}", restaurant_review_path(@restaurant, review), class: "btn btn-default" %></p>
+  <p><%= link_to "review details", restaurant_review_path(@restaurant, review), class: "btn btn-default" %></p>
   <p><%= image_tag User.find(review.user_id).user_photo.url(:thumb) %></p>
   <p><%= review.review_details %></p>
 <% end %>

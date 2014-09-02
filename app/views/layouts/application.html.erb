@@ -19,7 +19,6 @@
             <li><%= link_to "My Reviews", user_path(current_user) %></li>
             <li><%= link_to "Browse Restaurants", restaurants_path %></li>
             <li><%= link_to "Log Out", logout_path %></li>
-          <% else %>
             <li class="active"><%= link_to "Home", root_url %></li>
           <% end %>
         </ul>
@@ -39,10 +38,7 @@
 
 
 <%= yield %>
-<video autoplay loop poster="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg" id="bgvid">
-<source src="/assets/bgvideo.webm" type="video/webm" />
-<source src="/assets/bgvideo.mp4" type="video/mp4" />
-</video>
+
 
 </body>
 </html>

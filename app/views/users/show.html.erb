@@ -3,11 +3,13 @@
     <h1> Welcome <%= @user.email %> </h1>
   </div>
 
-<%= image_tag @user.user_photo.url(:thumb) %>
+<%= image_tag @user.user_photo.url(:thumb), id: "user_avatar" %>
 <br />
 <h2> Your Reviews: </h2>
 
 <% @user.reviews.each do |review| %>
   <%= review.review_details %>
 <% end %>
+
+<%= link_to "view restaurants", restaurants_path %>
 </div>

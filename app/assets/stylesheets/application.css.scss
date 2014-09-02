@@ -2,8 +2,12 @@
 @import "bootstrap";
 
 body {
-  text-align:center;
+  text-align: center;
   background-color: red;
+}
+
+#log_in_form {
+  margin-top: 50px;
 }
 
 #nav_logo {
@@ -11,9 +15,13 @@ body {
   border-radius: 50%
 }
 
+#user_avatar {
+  border-radius: 20px;
+  border: white 2px solid
+}
+
 #user_show_wrapper {
   margin-top: -20px;
-  text-align:left;
   background-color: red;
   background-size: cover;
   height: 800px;
@@ -44,11 +52,16 @@ body {
   border: 5px solid white;
   border-radius: 50px;
 }
+
 video#bgvid {
 position: fixed; right: 0; bottom: 0;
 min-width: 100%; min-height: 100%;
 width: auto; height: auto; z-index: -100;
 background: url(polina.jpg) no-repeat;
 background-size: cover;
+}
+
+#add_photo {
+  margin-left: 42em;
 }
 
