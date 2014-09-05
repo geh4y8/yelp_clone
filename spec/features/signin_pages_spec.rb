@@ -16,6 +16,6 @@ describe "the signin process" do
     fill_in 'Email', :with => 'user@example.com'
     fill_in 'Password', :with => 'wrong'
     click_button 'Log In'
-    page.should have_content 'invalid'
+    page.should have_content 'Sign Up'
   end
 end

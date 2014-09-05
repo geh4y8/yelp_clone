@@ -3,6 +3,9 @@
 
 
 <% @reviews.each do |review| %>
-  <p><%= link_to "#{review.rating}", restaurant_review_path(@restaurant, review), class: "btn btn-default" %></p>
+  <p>Description: <%= review.review_details %></p>
+  <p>Rating: <%= review.rating %></p>
+  <br />
+  <br />
 <% end %>
 
