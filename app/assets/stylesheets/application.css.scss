@@ -25,6 +25,9 @@ body {
   width: 300px;
   text-align: center;
   margin: auto;
+  border-radius: 20%;
+  opacity: 0.8;
+  margin-top: 100px;
 }
 
 #user_show_wrapper {
@@ -33,6 +36,11 @@ body {
   background-size: cover;
   height: 800px;
   width: 100%;
+
+}
+
+#current_user_login {
+  color: white;
 }
 
 #user_nav_label {
