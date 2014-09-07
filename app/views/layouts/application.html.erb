@@ -29,12 +29,12 @@
 <body>
 
 
-
-<% if !current_user %>
-  <%= link_to "Sign Up", signup_path %> or
-  <%= link_to "Log In", login_path %>
-<% end %>
-
+<div id="new_session_wrapper">
+  <% if !current_user %>
+    <%= link_to "Sign Up", signup_path, class: "btn btn-warning" %> or
+    <%= link_to "Log In", login_path, class: "btn btn-success" %>
+  <% end %>
+</div>
 
 
 <%= yield %>
