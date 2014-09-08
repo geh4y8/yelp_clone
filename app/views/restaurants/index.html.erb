@@ -3,7 +3,7 @@
 
 <% @restaurants.each do |restaurant| %>
   <p><%= image_tag restaurant.restaurant_photo.url(:thumb) %><p>
-  <p><%= link_to "#{restaurant.name}", restaurant_path(restaurant), class: "btn btn-default" %></p>
+  <p><%= link_to restaurant.name, restaurant_path(restaurant), class: "btn btn-default" %></p>
   <p><%= link_to "#{restaurant.reviews.count} reviews", restaurant_reviews_path(restaurant), class: "btn btn-default" %></p>
   <br />
   <br />

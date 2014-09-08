@@ -28,18 +28,6 @@ class ReviewsController < ApplicationController
     @review = @reviews.find(params[:id])
   end
 
-  def edit
-
-  end
-
-  def update
-
-  end
-
-  def destroy
-
-  end
-
 private
   def review_params
     params.require(:review).permit(:review_details, :rating, :user_id, :restaurant_id)

@@ -6,11 +6,10 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
   root :to => 'sessions#new'
-  resources :users
-  resources :sessions
-  resources :categories
+  resources :users, :only => [:new, :create, :show]
+  resources :sessions, :only => [:new, :create, :destroy]
   resources :restaurants do
-    resources :reviews
+    resources :reviews, :except => [:edit, :update, :destroy]
   end
 
 end
