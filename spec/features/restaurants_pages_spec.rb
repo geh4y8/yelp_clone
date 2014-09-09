@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe "adding a review" do
   it "allows a signed in user to add a review" do
